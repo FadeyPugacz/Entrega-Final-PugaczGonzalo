@@ -1,0 +1,16 @@
+@import "./complements/variables";
+@import "./complements/mixins";
+@import "./complements/bucles";
+
+// Include any default variable overrides here (though functions won't be available)
+@import "../node_modules/bootstrap/scss/bootstrap";
+// Then add additional custom code here
+
+@import "./pages/index";
+@import "./pages/nosotros";
+@import "./pages/areas";
+@import "./pages/servicios";
+@import "./pages/contacto";
+@import "./components/nav-bar";
+@import "./components/footer";
+@import "./components/general-styles";

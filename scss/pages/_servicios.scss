@@ -11,13 +11,16 @@
     }
 }
 .text__servicios{
-    background-color: $light;
-    color: $primary;
-    margin: 35px 15px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/back-caracteristicas.webp);
+    background-position: center;
+    background-size: cover;
+    color: $light;
     padding: 20px;
     text-align: center;
-    border-radius: 8px;
-    border: solid 1px $light-gold;
+    align-self: center;
+    p{
+        text-align: start;
+    };
 }
 .cards__asesoramiento, 
 .cards__resolucion, 
@@ -25,23 +28,24 @@
     @include cards-servicios-mobile;
 }
 /* FIN NUESTROS SERVICIOS */
-/* Inicia servicios tablet */
+/* INICIA SERVICIOS TABLET */
 @media (min-width: 768px) {
     #main-servicios{
         background-color: $secondary;
     }
     .text__servicios{
-        margin-top: 50px;
+        padding: 20px;
     }
     .cards__asesoramiento, .cards__resolucion, .cards__defensa{
-        background-color: #0706128a;
+        background-color: $primary;
+        margin: 35px;
     }
-    /* Fin servicios tablet */
 }
+// FIN SERVICIOS TABLET
+/*INICIA SERVICIOS DESKTOP*/
 @media  (min-width: 992px) {
-    /*Inicia Servicios desktop*/
     #main-servicios{
-        background-image: url(../img/back-caracteristicas.webp);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/back-caracteristicas.webp);
         background-repeat: no-repeat;
         background-size: cover;
         display: grid;
@@ -49,10 +53,16 @@
         height: 120vh;
     }
     .text__servicios{
-        background-color: rgba(246, 216, 97, 0.075);
+        background-color: #c3b0000b;
+        background-image: none;
         color:#eadbdb;
-        margin: 190px 0 220px 100px;
+        margin: 250px 0 220px 100px;
         padding: 20px;
+        border: solid 1px #c8b013b4;
+        border-radius: 8px;
+        p{
+            text-align: start;
+        }
     }
     .cards__asesoramiento{
         @include cards-servicios-desktop(140px);
@@ -62,4 +72,4 @@
         @include cards-servicios-desktop(0);
     }
 }
-/*Finaliza Servicios desktop*/
+/*FIN SERVICIOS DESKTOP*/
